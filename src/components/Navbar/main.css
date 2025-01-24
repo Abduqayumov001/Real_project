@@ -1,0 +1,17 @@
+.Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Wrapper input {
+  width: 50%;
+  height: 30px;
+  outline: none;
+}
