@@ -1,33 +1,35 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import Profile from "./page/Profile";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import UserProfile from "./page/UseProfile";
 import Login from "./page/Login";
 import Register from "./page/Register";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar"; // Sidebar-ni import qilyapmiz
+import Sidebar from "./components/Sidebar";
+import CreateGroup from "./page/createGruop";
+import Test2 from "./page/Test2";
+import Test22 from "./page/Test22";
+import Best from "./page/Best";
+import Test22sdcs from "./page/Test22sdcs";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Navigate to="/main" replace />} />
-        <Route
-          path="/main"
-          element={
-            <div className="flex">
-              <Sidebar />{" "}
-              {/* Sidebar-ni Navbar bilan yonma-yon joylashtiramiz */}
-              <div className="flex-1">
-                <Navbar />
-              </div>
-            </div>
-          }
-        >
-          <Route index element={<Profile />} />
-        </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </>
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Navigate to="/main/profile" replace />} />
+          <Route path="/main/profile" element={<UserProfile />} />
+          <Route path="/main/groups/create" element={<CreateGroup />} />
+          <Route path="/main/groups/test2" element={<Test2 />} />
+          <Route path="/main/groups/test22" element={<Test22 />} />
+          <Route path="/main/groups/best" element={<Best />} />
+          <Route path="/main/groups/test22sdcs" element={<Test22sdcs />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 

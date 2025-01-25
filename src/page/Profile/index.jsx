@@ -14,7 +14,7 @@ function Profile() {
       toast.error("Account deleted successfully!");
     };
   return (
-    <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg w-full max-w-4xl mx-auto mt-[30px] mr-[50px]">
+    <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg w-full max-w-4xl mx-auto mt-[30px]">
       <h1 className="text-3xl font-bold mb-4">Your Profile</h1>
       <div className="flex items-center space-x-4 mb-6">
         <div className="bg-red-500 text-white w-16 h-16 rounded-full flex justify-center items-center text-3xl">
